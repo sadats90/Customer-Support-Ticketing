@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { ticketsAPI, commentsAPI } from '../api/tickets';
 import { ticketStyles } from '../shared/componentStyles';
 import EditTicket from '../components/EditTicket';
+import Chat from '../components/Chat';
 
 const TicketDetail = () => {
   const { id } = useParams();
@@ -209,6 +210,10 @@ const TicketDetail = () => {
               {submitting ? 'Posting...' : 'Post Comment'}
             </button>
           </form>
+        </div>
+
+        <div style={{ marginTop: '2rem' }}>
+          <Chat ticketId={id} />
         </div>
       </div>
 

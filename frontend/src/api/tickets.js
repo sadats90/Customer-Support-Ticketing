@@ -43,3 +43,15 @@ export const commentsAPI = {
     return response.data;
   },
 };
+
+export const messagesAPI = {
+  getAll: async (ticketId) => {
+    const response = await api.get(`/tickets/${ticketId}/messages`);
+    return response.data;
+  },
+  
+  create: async (ticketId, message) => {
+    const response = await api.post(`/tickets/${ticketId}/messages`, { message });
+    return response.data;
+  },
+};
