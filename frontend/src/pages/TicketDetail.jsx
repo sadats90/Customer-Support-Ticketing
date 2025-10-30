@@ -106,7 +106,7 @@ const TicketDetail = () => {
   return (
     <div style={{ minHeight: '100vh', background: '#f8fafc' }}>
       <nav style={styles.nav}>
-        <h1 style={styles.navTitle} onClick={() => navigate('/dashboard')} style={{...styles.navTitle, cursor: 'pointer'}}>Support Ticketing System</h1>
+        <h1 style={{...styles.navTitle, cursor: 'pointer'}} onClick={() => navigate('/dashboard')}>Support Ticketing System</h1>
         <div style={styles.navRight}>
           <span style={styles.userInfo}>Welcome, {user?.name} ({user?.role})</span>
         </div>
